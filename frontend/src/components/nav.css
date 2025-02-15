@@ -1,0 +1,108 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 40px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #444;
+    color: white;
+    padding: 8px 15px; /* Reduced padding */
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Smaller text */
+}
+
+.dropbtn:hover {
+    background-color: #555;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222;
+    color: white;
+    min-width: 200px; /* Reduced width */
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Form Styling */
+.dropdown-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+}
+
+.dropdown-content label {
+    font-size: 12px; /* Smaller text */
+    font-weight: bold;
+}
+
+.dropdown-content input {
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    padding: 8px; /* Reduced padding */
+    border-radius: 5px; /* Slightly smaller border radius */
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.dropdown-content input:focus {
+    border-color: #777;
+}
+
+.dropdown-content .submit-btn {
+    background-color: #444;
+    color: white;
+    padding: 8px; /* Smaller button */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 12px; /* Smaller font */
+}
+
+.dropdown-content .submit-btn:hover {
+    background-color: #555;
+}
