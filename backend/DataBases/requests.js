@@ -1,15 +1,15 @@
 const mongoose=require('mongoose');
 
-const DB=mongoose.createConnection("mongodb://localhost:27017/requests");
+const DB=mongoose.createConnection("mongodb://localhost:27017/Credentials");
 DB.on("connection",()=>{
     console.log("connected successfully");
 })
 
 const reqSchema=new mongoose.Schema({
-    username: String,
+    username: {type: String,required : true,unique:true},
     password : String
 })
 
-const ReqModel=new mongoose.Model("Requests",reqSchema)
+const ReqModel=DB.model("Requests",reqSchema)
 
-module.exports={ReqModel:ReqModel};
+module.exports=ReqModel;
